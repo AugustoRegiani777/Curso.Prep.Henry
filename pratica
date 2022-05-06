@@ -1,0 +1,82 @@
+const { crearGato } = require("./05-JS-IV/homework/homework")
+
+var objeto = [
+    propiedad1: valor1
+    ...
+    propiedad2: valor2
+]
+
+alumno = { // esto es una clase
+    nombre,
+    apellido,
+    edad,
+    direccion,
+    email
+}
+//ejemplo. primero declarar la variable y despues el objeto (en este caso es objeto, su clase es "alumnos")
+var boris = { // es un alumno * esto es un objeto literal
+    nombre: 'boris',
+    apellido: 'del carpio',
+    edad: 23,
+    direccion: 'sadadada123',
+    email: 'boris@gmail.com',
+    saludar: function() {
+        console.log ('hola,boris')};
+    }
+}
+
+mark = {// es un alumno
+    nombre: 'mark',
+    apellido: 'cameron',
+    edad: 23,
+    direccion: 'sadadada123',
+    email: 'marks@gmail.com'
+}
+
+//vamos a crear clases e instancias
+
+// paradigma de programacion orientada a objetos. es como se modelan los problemas. el lenguaje java esta fuermente orietado a objetos.
+// en javascrip, no esta tan orientado a objetos. es un leguaje mas bien de prototipado.
+/* java scrip, es un robo de java, el nombre es asi por cuestiones de marketing, y le robo mucha sintaxis, para que le ptrogramador que venia de java, se sienta comodo con el nuevo proyecto script
+
+// como creamos objetos que sean parecidos entre ellos,, osea como creamos una plantilla para poder crear los objetos todos iguales
+
+1) function contructors : esta funcion nos va apermitir construir objetos. (lo puedo encontrar ocmo unfactory, por que es parecido.)
+new: es un keyword para sumar algo
+cuando creo la funcion constructora para crear la clase
+despues hago new car, le paso las propiedades, y me define el objeto auto, que es una instacia de la clase auto
+
+constructor se escribe asi :
+*/ 
+function Persona (){ } // hay una convencion de que todas las funciones constructoras empiecen con mayuscula en su nombre. Por eso Persona va con mayuscula
+    this.nombre='Juan';
+    this.apellido='Perez';
+
+}
+
+//keyword new
+var juan = new Persona(): //instanciar una Persona, (Ques la clase que esta arriba), me devuleve un objeto que tiene una forma, 
+// es una expresion que me devuelve algo, yo puedo guardarlo en una variable
+
+//ejemplo
+
+function Car (marca, cv, color) {//mayuscula por que es constructor
+    this.marca = marca;
+    this.cv = cv;
+    this.color = color;
+}
+
+var audi= new Car ('audi', 1500, 'verde'); //aca uso la kerword para ingresar  un auto a la plantilla de constructor.
+var golcito = new Car ('VW', 1000, 'azul');
+
+//El ketword new, hace tareas detras de escena
+// primero crea un objeto vacio var objeto ={};
+// despues hace algo que se denomina bindiar "bind", que lo que hace es darnos el control de darle valor a this.
+var objeto = {};
+Car ('audi', 1500, 'verde').bind(objeto/*objeto vacio*/) // bind, el this de la funcion CAR
+  mete a todos estos datos de Car, a el objeto vacio que crear, con sus datos// tiene que ser objeto
+ 
+  return objeto; /*y termina retornando objeto, al valor del */this.
+// Estoy despues lo puedo consultar buscando solo la palabra "audi".
+
+//todos los objetos tienen un prototipo. por ejemplo del Audi, es auto. 

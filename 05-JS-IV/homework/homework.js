@@ -79,10 +79,12 @@ function tieneEmail(usuario) {
 
 
 function tienePropiedad(objeto, propiedad) {
-  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
+  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) 
+  // cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+
   if ( objeto[propiedad]) {
     return true;
   }
@@ -94,6 +96,9 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
+
+
+
  if ( usuario['password'] === password) {
    return true;
  }
@@ -105,6 +110,8 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+
+
   usuario.password= nuevaPassword;
   return usuario;
 }
@@ -114,6 +121,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
+
   usuario.amigos.push (nuevoAmigo);
   return usuario;
 }
@@ -124,6 +132,8 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+
   for(var i = 0; i < usuarios.length; i++) {
     usuarios[i].esPremium = true;
   }
@@ -137,6 +147,16 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+
+/* Usuarios:
+ posts [ objetos post:
+            1 
+              likes = 3
+            2
+             likes = 5
+            3 
+              likes = 4]; */
+
    var suma = 0;
 
   for(var i = 0; i < usuario.posts.length; i++) {
@@ -148,7 +168,8 @@ function sumarLikesDeUsuario(usuario) {
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio"
+  // o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
   // Devuelve el objeto "producto" al final de la función
   // Ejemplo:
@@ -156,6 +177,7 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+
   
 producto.calcularPrecioDescuento = function() {
   return this.precio - ( this.precio * this.porcentajeDeDescuento );
